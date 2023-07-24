@@ -8,7 +8,7 @@ const App = () => {
 
     useEffect(() => {
         // events to display when page loads
-        getEvents('classificationName=music&size=10')
+        getEvents('classificationName=music')
             .then((data) => setEvents(data))
             .catch((error) => console.error(error));
     }, []);
@@ -16,7 +16,7 @@ const App = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
         try {
-            const data = await getEvents(`keyword=${searchQuery}&sort=date,asc`);
+            const data = await getEvents(`keyword=${searchQuery}`);
             setEvents(data);
         } catch (error) {
             console.error(error);

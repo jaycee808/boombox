@@ -11,3 +11,98 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background-color: #000;
+  color: #FFF;
+}
+/* Styles for the event list */
+
+.event-list-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000; 
+  color: #FFF;
+}
+
+.event-list-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  overflow-x: scroll; /* Enable horizontal scroll */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.event-item {
+  flex: 0 0 300px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.event-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.event-details {
+  text-align: left;
+}
+
+.event-name {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+.event-venue {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.event-date,
+.event-time {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.event-url a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.event-url a:hover {
+  text-decoration: underline;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 8rem;
+  color: #FFF;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+
+
+
