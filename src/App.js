@@ -3,41 +3,41 @@ import EventList from './components/EventList';
 import { getEvents } from './services/EventSearch';
 
 const App = () => {
-  const [events, setEvents] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+    const [events, setEvents] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
 
-  useEffect(() => {
-    // events to display when page loads
-    getEvents('classificationName=music&size=10')
-      .then((data) => setEvents(data))
-      .catch((error) => console.error(error));
-  }, []);
+    useEffect(() => {
+        // events to display when page loads
+        getEvents('classificationName=music&size=10')
+            .then((data) => setEvents(data))
+            .catch((error) => console.error(error));
+    }, []);
 
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    try {
-      const data = await getEvents(`keyword=${searchQuery}`);
-      setEvents(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+    const handleSearch = async (e) => {
+        e.preventDefault();
+        try {
+            const data = await getEvents(`keyword=${searchQuery}&sort=date,asc`);
+            setEvents(data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
-  return (
-    <div>
-      <h1>BOOMBOX</h1>
-      <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search for an event"
-        />
-        <button type="submit">Search</button>
-      </form>
-      <EventList events={events} />
-    </div>
-  );
+    return (
+        <div>
+            <h1>BOOMBOX</h1>
+            <form onSubmit={handleSearch}>
+                <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search for an event"
+                />
+                <button type="submit">Search</button>
+            </form>
+            <EventList events={events} />
+        </div>
+    );
 };
 
 export default App;
