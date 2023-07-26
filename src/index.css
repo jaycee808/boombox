@@ -36,8 +36,8 @@ body {
   list-style: none;
   padding: 0;
   display: flex;
-  overflow-x: scroll; /* Enable horizontal scroll */
-  scroll-behavior: smooth; /* Smooth scrolling */
+  overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
 .event-item {
