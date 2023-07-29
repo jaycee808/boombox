@@ -8,7 +8,7 @@ const App = () => {
 
     useEffect(() => {
         // events to display when page loads
-        getEvents('classificationName=music')
+        getEvents('classificationName=music&country=gb')
             .then((data) => setEvents(data))
             .catch((error) => console.error(error));
     }, []);
