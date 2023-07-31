@@ -7,35 +7,59 @@ const App = () => {
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
-        // events to display when page loads
+        // Events to display when the page loads
         getEvents('classificationName=music&country=gb')
-            .then((data) => setEvents(data))
-            .catch((error) => console.error(error));
+        .then((data) => setEvents(data))
+        .catch((error) => console.error(error));
     }, []);
 
     const handleSearch = async (e) => {
         e.preventDefault();
         try {
-            const data = await getEvents(`keyword=${searchQuery}`);
-            setEvents(data);
+        const data = await getEvents(`keyword=${searchQuery}`);
+        setEvents(data);
         } catch (error) {
-            console.error(error);
+        console.error(error);
         }
     };
 
     return (
         <div>
-            <h1>BOOMBOX</h1>
-            <form onSubmit={handleSearch}>
-                <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search for an event"
-                />
-                <button type="submit">Search</button>
+        <div className="header">
+            <h1 className="logo">BOOMBOX</h1>
+            <form className="search-bar" onSubmit={handleSearch}>
+            <input className="search-input"
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search for an event"
+            />
+            <button className="search-btn" type="submit">Search</button>
             </form>
+        </div>
+        <div className="event-categories">
+            <div className="row">
+            <div className="column">
+                <div className="music-events">
+                <div className="category-title">MUSIC</div>
+                </div>
+                <div className="sport-events">
+                <div className="category-title">SPORT</div>
+                </div>
+            </div>
+            <div className="column">
+                <div className="theatre-events">
+                <div className="category-title">THEATRE</div>
+                </div>
+                <div className="comedy-events">
+                <div className="category-title">COMEDY</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div>
             <EventList events={events} />
+        </div>
         </div>
     );
 };
