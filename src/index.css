@@ -38,9 +38,7 @@ body {
 .event-list {
   list-style: none;
   padding: 0;
-  display: flex;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
+  display: grid;
 }
 
 .event-item {
