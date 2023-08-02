@@ -127,4 +127,5 @@ body {
 .event-search-item {
   list-style: none;
   display: flex;
+  cursor: pointer;
 }
