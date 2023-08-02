@@ -23,45 +23,38 @@ const App = () => {
         }
     };
 
-    return (
-        <div>
+return (
+    <div>
         <div className="header">
-            <h1 className="logo">BOOMBOX</h1>
-            <form className="search-bar" onSubmit={handleSearch}>
-            <input className="search-input"
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search for an event"
+        <h1 className="logo">BOOMBOX</h1>
+        <form className="search-bar" onSubmit={handleSearch}>
+            <input
+            className="search-input"
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search for an event"
             />
-            <button className="search-btn" type="submit">Search</button>
-            </form>
+            <button className="search-btn" type="submit">
+            Search
+            </button>
+        </form>
         </div>
-        <div className="event-categories">
-            <div className="row">
-            <div className="column">
-                <div className="music-events">
-                <div className="category-title">MUSIC</div>
-                </div>
-                <div className="sport-events">
-                <div className="category-title">SPORT</div>
-                </div>
-            </div>
-            <div className="column">
-                <div className="theatre-events">
-                <div className="category-title">THEATRE</div>
-                </div>
-                <div className="comedy-events">
-                <div className="category-title">COMEDY</div>
-                </div>
-            </div>
-            </div>
+
+        <div className="event-search-categories">
+            <ul className="event-categories">
+                <li className="event-search-item">MUSIC</li>
+                <li className="event-search-item">SPORT</li>
+                <li className="event-search-item">THEATRE</li>
+                <li className="event-search-item">COMEDY</li>
+            </ul>
         </div>
+
         <div>
             <EventList events={events} />
         </div>
-        </div>
-    );
+    </div>
+);
 };
 
 export default App;

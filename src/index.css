@@ -39,7 +39,6 @@ body {
 .event-list {
   list-style: none;
   padding: 0;
-  display: grid;
 }
 
 .event-item {
@@ -57,8 +56,8 @@ body {
 }
 
 .event-image {
-  width: 200px;
-  height: 200px;
+  width: 225px;
+  height: 225px;
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -71,19 +70,20 @@ body {
 }
 
 .event-name {
-  font-size: 20px;
-  margin-bottom: 5px;
+  font-size: 2em;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-
 .event-venue {
-  font-size: 16px;
+  font-size: 1.2em;
   margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .event-date,
 .event-time {
-  font-size: 14px;
+  font-size: 1.2em;
   color: #ccc;
 }
 
@@ -95,39 +95,6 @@ body {
 .event-url a:hover {
   text-decoration: underline;
 }
-
-.nav-arrow {
-  position: absolute;
-  top: 50%;
-  font-size: 8rem;
-  color: #FFF;
-  padding: 8px;
-  cursor: pointer;
-}
-
-.left-arrow {
-  left: 0;
-}
-
-.right-arrow {
-  right: 0;
-}
-
-/* .header {
-  display: grid;
-}
-
-.logo {
-  text-align: center;
-  font-size: 6em;
-  font-weight: 800;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-
-.search-bar {
-  margin: auto;
-} */
 
 
 .header {
@@ -152,36 +119,12 @@ body {
 
 .event-categories {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
+  justify-content: space-evenly;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5em;
 }
 
-.row {
+.event-search-item {
+  list-style: none;
   display: flex;
-}
-
-.column {
-  flex: 1;
-}
-
-/* event category styles */
-.music-events,
-.theatre-events,
-.sport-events,
-.comedy-events {
-  background-color: #f5f5f5;
-  padding: 20px;
-  margin: 2rem;
-  text-align: center;
-  min-width: 500px;
-  height: 150px;
-  display: flex;
-}
-
-.category-title {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #000;
-  font-family: 'Oswald', sans-serif;
 }
