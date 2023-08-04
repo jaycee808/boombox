@@ -14,9 +14,9 @@ const EventList = ({ events }) => {
 return (
     <div className="event-list-container">
         <h2 className="event-list-title">Events List</h2>
-        <ul className="event-list">
+        <div className="event-list">
         {filteredEvents.map((event) => (
-            <li key={event.id} className="event-item">
+            <div key={event.id} className="event-item">
             <div className="event-item-content">
                 {event.images && event.images.length > 0 && (
                 <img className="event-image" src={event.images[0].url} alt={event.name} />
@@ -38,9 +38,9 @@ return (
                 )}
                 </div>
             </div>
-            </li>
+            </div>
         ))}
-        </ul>
+        </div>
     </div>
     );
 };
