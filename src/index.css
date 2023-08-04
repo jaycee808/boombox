@@ -216,14 +216,13 @@ img {
 .event-time {
   /* font-size: 1.2em;
   color: #ccc; */
-  
 }
 
 .event-url a {
-  /* color: #007bff;
-  text-decoration: none; */
+  color: #007bff;
+  text-decoration: none;
 }
 
 .event-url a:hover {
-  /* text-decoration: underline; */
+  text-decoration: underline;
 }
