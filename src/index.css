@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body {
   margin: 0;
@@ -10,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 /* header styles */
@@ -24,6 +24,7 @@ body {
   font-weight: 800;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .search-input {
@@ -37,7 +38,7 @@ body {
 .event-categories {
   display: flex;
   justify-content: space-evenly;
-  font-family: "Oswald", sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
   font-size: 1.5em;
 }
 
@@ -61,7 +62,6 @@ body {
   font-size: 3rem;
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'Oswald', sans-serif;
 }
 
 .event-list {
@@ -133,7 +133,6 @@ img {
 }
 
 .event-list-container {
-  font-family: 'Oswald', sans-serif;
   max-width: 90%;
   padding: 20px;
 }
@@ -142,7 +141,6 @@ img {
   font-size: 4rem;
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'Oswald', sans-serif;
 }
 
 .event-list {
@@ -162,7 +160,8 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* background: rgba(255, 255, 255, 0.2); */
+  
+  font-family: "Poppins", sans-serif;
 }
 .event-venue {
   font-size: 1.2em;
@@ -180,6 +179,8 @@ img {
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
+
+  font-family: "Poppins", sans-serif;
 }
 
 .event-item {
@@ -188,7 +189,6 @@ img {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-family: 'Oswald', sans-serif; */
 }
 
 .event-item-content {
