@@ -10,6 +10,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Bricolage Grotesque", sans-serif;
+
+  background-image: url("./images/background-two.jpg");
+  /* background-size: cover; */
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 /* header styles */
@@ -27,12 +32,18 @@ body {
   font-family: "Bricolage Grotesque", sans-serif;
 }
 
+.search-bar {
+  
+}
+
 .search-input {
   width: 250px;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .search-btn {
   width: 70px;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .event-categories {
@@ -163,6 +174,7 @@ img {
   
   font-family: "Poppins", sans-serif;
 }
+
 .event-venue {
   font-size: 1.2em;
   margin-bottom: 5px;
