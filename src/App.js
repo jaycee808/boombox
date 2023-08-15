@@ -8,7 +8,7 @@ const App = () => {
 
     useEffect(() => {
         // Events to display when the page loads
-        getEvents('classificationName=events')
+        getEvents('classificationName=music')
             .then((data) => setEvents(data))
             .catch((error) => console.error(error));
     }, []);
@@ -35,7 +35,33 @@ const App = () => {
     return (
         <div>
             <div className="header">
-                <h1 className="logo">boombox</h1>
+                    <h1 className="logo">boombox</h1>
+                    <ul className="event-categories">
+                        <li
+                            className="event-search-item"
+                            onClick={() => handleCategoryClick('music')}
+                        >
+                            MUSIC
+                        </li>
+                        <li
+                            className="event-search-item"
+                            onClick={() => handleCategoryClick('sport')}
+                        >
+                            SPORT
+                        </li>
+                        <li
+                            className="event-search-item"
+                            onClick={() => handleCategoryClick('theatre')}
+                        >
+                            THEATRE
+                        </li>
+                        <li
+                            className="event-search-item"
+                            onClick={() => handleCategoryClick('comedy')}
+                        >
+                            COMEDY
+                        </li>
+                    </ul>
                 <form className="search-bar" onSubmit={handleSearch}>
                     <input
                         className="search-input"
@@ -48,35 +74,6 @@ const App = () => {
                         Search
                     </button>
                 </form>
-            </div>
-
-            <div className="event-search-categories">
-                <ul className="event-categories">
-                    <li
-                        className="event-search-item"
-                        onClick={() => handleCategoryClick('music')}
-                    >
-                        MUSIC
-                    </li>
-                    <li
-                        className="event-search-item"
-                        onClick={() => handleCategoryClick('sport')}
-                    >
-                        SPORT
-                    </li>
-                    <li
-                        className="event-search-item"
-                        onClick={() => handleCategoryClick('theatre')}
-                    >
-                        THEATRE
-                    </li>
-                    <li
-                        className="event-search-item"
-                        onClick={() => handleCategoryClick('comedy')}
-                    >
-                        COMEDY
-                    </li>
-                </ul>
             </div>
 
             <div>
