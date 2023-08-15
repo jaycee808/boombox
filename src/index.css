@@ -85,39 +85,36 @@ img {
 }
 
 .event-name {
-  font-size: 3.4em;
+  font-size: 2.2em;
   font-weight: bold;
   margin: 0;
   position: relative;
-  top: -3rem;
+  top: -2rem;
   text-transform: uppercase;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
   z-index: 1;
+  font-family: "Poppins", sans-serif;
+
+  -webkit-text-stroke: 1.4px #040404;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
-  
-  font-family: "Poppins", sans-serif;
+  color: #FFF;
 }
 
 .event-venue {
-  font-size: 1.2em;
+  font-size: 2.2em;
   margin-bottom: 5px;
   text-transform: uppercase;
-  font-size: 3.4em;
   font-weight: bold;
   margin: 0;
   position: relative;
   text-transform: uppercase;
-  
-  -webkit-text-stroke: 1px #FFF;
   z-index: 1;
-  
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-
   font-family: "Poppins", sans-serif;
+  
+  -webkit-text-stroke: 1.4px #040404;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #FFF;
 }
 
 .event-item {

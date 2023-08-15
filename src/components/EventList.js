@@ -13,7 +13,7 @@ const EventList = ({ events }) => {
 
 return (
     <div className="event-list-container">
-        <h2 className="event-list-title">Events List</h2>
+        {/* <h2 className="event-list-title">Events List</h2> */}
         <div className="event-list">
         {filteredEvents.map((event) => (
             <div key={event.id} className="event-item">
