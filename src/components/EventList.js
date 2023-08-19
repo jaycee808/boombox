@@ -11,37 +11,41 @@ const EventList = ({ events }) => {
         return foundIndex === index;
     });
 
-return (
-    <div className="event-list-container">
-        {/* <h2 className="event-list-title">Events List</h2> */}
-        <div className="event-list">
-        {filteredEvents.map((event) => (
-            <div key={event.id} className="event-item">
-            <div className="event-item-content">
-                {event.images && event.images.length > 0 && (
-                <img className="event-image" src={event.images[0].url} alt={event.name} />
-                )}
-                <div className="event-details">
-                <h3 className="event-name">{event.name}</h3>
-                <p className="event-date">Date: {event.dates.start.localDate}</p>
-                <p className="event-time">Time: {event.dates.start.localTime}</p>
-                <p className="event-url">
-                    URL: <a href={event.url} target="_blank" rel="noopener noreferrer">{event.url}</a>
-                </p>
-                {event._embedded?.venues?.length > 0 ? (
-                    <div>
-                    <p className="event-venue">Venue: {event._embedded.venues[0].name}</p>
-                    <EventMap event={event} />
+    return (
+        <div className="event-list-container">
+            <div className="event-list">
+                {filteredEvents.map((event) => (
+                    <div key={event.id} className="event-item">
+                        <div className="event-item-content">
+                            {event.images && event.images.length > 0 && (
+                                <img className="event-image" src={event.images[0].url} alt={event.name} />
+                            )}
+                            <div className="event-details">
+                                <h3 className="event-name">{event.name}</h3>
+                                <p className="event-date">
+                                    {new Date(event.dates.start.localDate).getDate()}{' '}
+                                    {new Date(event.dates.start.localDate).toLocaleString('default', { month: 'long' })}{' '}
+                                    {new Date(event.dates.start.localDate).getFullYear()}
+                                </p>
+                                <button className="ticket-btn">
+                                    <a href={event.url} target="_blank" rel="noopener noreferrer">
+                                        Find Tickets
+                                    </a>
+                                </button>
+                                {event._embedded?.venues?.length > 0 ? (
+                                    <div>
+                                        <p className="event-venue">Venue: {event._embedded.venues[0].name}</p>
+                                        <EventMap event={event} />
+                                    </div>
+                                ) : (
+                                    <p className="event-venue">Venue information not available</p>
+                                )}
+                            </div>
+                        </div>
                     </div>
-                ) : (
-                    <p className="event-venue">Venue information not available</p>
-                )}
-                </div>
+                ))}
             </div>
-            </div>
-        ))}
         </div>
-    </div>
     );
 };
 

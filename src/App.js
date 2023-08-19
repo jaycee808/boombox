@@ -68,10 +68,10 @@ const App = () => {
                         type="text"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="Search for an event"
+                        placeholder="search for an event"
                     />
                     <button className="search-btn" type="submit">
-                        Search
+                        search
                     </button>
                 </form>
             </div>

@@ -2,8 +2,6 @@
 
 body {
   margin: 0;
-  background-color: #000;
-  color: #FFF;
   font-family: "Bricolage Grotesque", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,6 +20,7 @@ body {
 .logo {
   font-size: 4em;
   font-weight: 800;
+  color: #E6E6E6;
   margin: 0;
   font-family: "Bricolage Grotesque", sans-serif;
 }
@@ -32,24 +31,29 @@ body {
 }
 
 .search-input {
-  width: 250px;
+  width: 280px;
   font-family: "Bricolage Grotesque", sans-serif;
   padding: 0.5rem;
   border: none;
+  font-size: 1.2em;
 }
 
-.search-btn {
-  width: 70px;
+.search-btn,
+.ticket-btn {
+  width: 100px;
   font-family: "Bricolage Grotesque", sans-serif;
   padding: 0.5rem;
   border: none;
+  font-size: 1.2em;
 }
 
 .event-categories {
   display: flex;
   align-items: center;
   font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.4em;
+  color: #E6E6E6;
+  text-transform: lowercase;
 }
 
 .event-search-item {
@@ -63,18 +67,19 @@ body {
 img {
   min-width: 100px;
   max-height: 200px;
-  border: 2px solid #FFF;
+  border: 2px solid #E6E6E6;
 }
 
 .event-list-container {
   padding: 20px;
-  background-image: url("./images/background-two.jpg");
+  background-color: #010101;
+  /* background-image: url("./images/background-two.jpg");
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 .event-list-title {
-  font-size: 4rem;
+  font-size: 1.4em;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -93,11 +98,10 @@ img {
   text-transform: uppercase;
   z-index: 1;
   font-family: "Poppins", sans-serif;
-
-  -webkit-text-stroke: 1.4px #040404;
+  -webkit-text-stroke: 1.2px #040404;
   -webkit-background-clip: text;
   background-clip: text;
-  color: #FFF;
+  color: #E6E6E6;
 }
 
 .event-venue {
@@ -110,11 +114,11 @@ img {
   text-transform: uppercase;
   z-index: 1;
   font-family: "Poppins", sans-serif;
-  
-  -webkit-text-stroke: 1.4px #040404;
+
+  -webkit-text-stroke: 1.2px #040404;
   -webkit-background-clip: text;
   background-clip: text;
-  color: #FFF;
+  color: #E6E6E6;
 }
 
 .event-item {
@@ -125,19 +129,17 @@ img {
   margin-left: 4rem;
 }
 
-.event-date,
-.event-time {
+.event-date {
+  font-size: 1.6em;
+  color: #E6E6E6;
+}
+
+.ticket-btn {
+  width: 140px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  padding: 0.5rem;
+  border: none;
   font-size: 1.2em;
-  color: #ccc;
-}
-
-.event-url a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.event-url a:hover {
-  text-decoration: underline;
 }
 
 /* media queries for navigation bar */
