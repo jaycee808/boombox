@@ -5,6 +5,7 @@ body {
   font-family: "Bricolage Grotesque", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #010101;
 }
 
 /* header styles */
@@ -13,8 +14,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   background-color: #010101;
+  margin: 0 1rem;
 }
 
 .logo {
@@ -38,9 +39,8 @@ body {
   font-size: 1.2em;
 }
 
-.search-btn,
-.ticket-btn {
-  width: 100px;
+.search-btn {
+  width: 80px;
   font-family: "Bricolage Grotesque", sans-serif;
   padding: 0.5rem;
   border: none;
@@ -64,69 +64,57 @@ body {
 
 /* Event list styles */
 
-img {
-  min-width: 100px;
-  max-height: 200px;
-  border: 2px solid #E6E6E6;
+.event-list-container {
+  display: flex;
+  margin: 2rem;
 }
 
-.event-list-container {
-  padding: 20px;
-  background-color: #010101;
-  /* background-image: url("./images/background-two.jpg");
-  background-position: center center;
-  background-attachment: fixed; */
+
+.event-image {
+  width: 100%;
+  max-width: 100%;
+  border: 2px solid #E6E6E6;
 }
 
 .event-list-title {
   font-size: 1.4em;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .event-list {
   list-style: none;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .event-name {
   font-size: 2.2em;
   font-weight: bold;
-  margin: 0;
-  position: relative;
-  top: -2rem;
-  text-transform: uppercase;
-  z-index: 1;
-  font-family: "Poppins", sans-serif;
-  -webkit-text-stroke: 1.2px #040404;
-  -webkit-background-clip: text;
-  background-clip: text;
   color: #E6E6E6;
 }
 
 .event-venue {
-  font-size: 2.2em;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin: 0;
-  position: relative;
-  text-transform: uppercase;
-  z-index: 1;
-  font-family: "Poppins", sans-serif;
-
-  -webkit-text-stroke: 1.2px #040404;
-  -webkit-background-clip: text;
-  background-clip: text;
+  font-size: 1.6em;
   color: #E6E6E6;
 }
 
 .event-item {
-  margin-bottom: 1rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.event-item-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .event-details {
-  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .event-date {
@@ -136,10 +124,12 @@ img {
 
 .ticket-btn {
   width: 140px;
-  font-family: "Bricolage Grotesque", sans-serif;
   padding: 0.5rem;
   border: none;
   font-size: 1.2em;
+  margin-top: 1rem;
+  background-color: #E6E6E6;
+  cursor: pointer;
 }
 
 /* media queries for navigation bar */
