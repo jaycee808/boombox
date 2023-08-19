@@ -42,10 +42,10 @@ const App = () => {
                         type="text"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="search for an event"
+                        placeholder="Search for an event"
                     />
                     <button className="search-btn" type="submit">
-                        search
+                        Search
                     </button>
                 </form>
             </div>
@@ -55,29 +55,28 @@ const App = () => {
                         className="event-search-item"
                         onClick={() => handleCategoryClick('music')}
                     >
-                    MUSIC
+                    Music
                     </li>
                     <li
                         className="event-search-item"
                         onClick={() => handleCategoryClick('sport')}
                     >
-                    SPORT
+                    Sport
                     </li>
                     <li
                         className="event-search-item"
                         onClick={() => handleCategoryClick('theatre')}
                     >
-                    THEATRE
+                    Theatre
                     </li>
                     <li
                         className="event-search-item"
                         onClick={() => handleCategoryClick('comedy')}
                     >
-                    COMEDY
+                    Comedy
                     </li>
                 </ul>
             </div>
-            
             <div>
                 <EventList events={events} />
             </div>
