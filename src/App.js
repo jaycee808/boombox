@@ -36,33 +36,7 @@ const App = () => {
         <div>
             <div className="header">
                     <h1 className="logo">boombox</h1>
-                    <ul className="event-categories">
-                        <li
-                            className="event-search-item"
-                            onClick={() => handleCategoryClick('music')}
-                        >
-                            MUSIC
-                        </li>
-                        <li
-                            className="event-search-item"
-                            onClick={() => handleCategoryClick('sport')}
-                        >
-                            SPORT
-                        </li>
-                        <li
-                            className="event-search-item"
-                            onClick={() => handleCategoryClick('theatre')}
-                        >
-                            THEATRE
-                        </li>
-                        <li
-                            className="event-search-item"
-                            onClick={() => handleCategoryClick('comedy')}
-                        >
-                            COMEDY
-                        </li>
-                    </ul>
-                <form className="search-bar" onSubmit={handleSearch}>
+                    <form className="search-bar" onSubmit={handleSearch}>
                     <input
                         className="search-input"
                         type="text"
@@ -75,7 +49,35 @@ const App = () => {
                     </button>
                 </form>
             </div>
-
+            <div>
+                <ul className="event-categories">
+                    <li
+                        className="event-search-item"
+                        onClick={() => handleCategoryClick('music')}
+                    >
+                    MUSIC
+                    </li>
+                    <li
+                        className="event-search-item"
+                        onClick={() => handleCategoryClick('sport')}
+                    >
+                    SPORT
+                    </li>
+                    <li
+                        className="event-search-item"
+                        onClick={() => handleCategoryClick('theatre')}
+                    >
+                    THEATRE
+                    </li>
+                    <li
+                        className="event-search-item"
+                        onClick={() => handleCategoryClick('comedy')}
+                    >
+                    COMEDY
+                    </li>
+                </ul>
+            </div>
+            
             <div>
                 <EventList events={events} />
             </div>
