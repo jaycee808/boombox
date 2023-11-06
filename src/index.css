@@ -170,8 +170,37 @@ body {
 
 @media (max-width: 400px) {
   
+  .logo {
+    font-size: 3em;
+  }
+
   .event-list-container {
     margin: 1rem;
   }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
   
+  .search-input {
+    width: 200px;
+    padding: 0.25em;
+    border: none;
+    font-size: 1em;
+    background-color: #E6E6E6;
+    color: #010101;
+  }
+  
+  .search-btn {
+    width: 60px;
+    padding: 0.25em;
+    border: none;
+    font-size: 1em;
+    background-color: #010101;
+    color: #E6E6E6;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
 }
