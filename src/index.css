@@ -33,6 +33,7 @@ body {
   align-items: center;
   margin: 0 1rem;
   border: 0.4px solid #E6E6E6;
+  width: 360px;
 }
 
 .search-input {
