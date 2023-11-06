@@ -49,7 +49,7 @@ const App = () => {
                     </button>
                 </form>
             </div>
-            <div>
+            <div class="event-search-menu">
                 <ul className="event-categories">
                     <li
                         className="event-search-item"
