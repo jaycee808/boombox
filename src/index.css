@@ -62,7 +62,7 @@ body {
 .event-categories {
   display: flex;
   justify-content: space-evenly;
-  font-size: 1.4em;
+  font-size: 1em;
   background-color: rgba(7, 7, 7, 0.75);
   color: #E6E6E6;
   border-top: 0.5px solid #E6E6E6;
@@ -80,7 +80,7 @@ body {
   cursor: pointer;
   border: none;
   font-size: 1.2em;
-  padding: 5px;
+  padding: 2px;
 }
 
 /* Event list styles */
@@ -158,10 +158,10 @@ body {
   background-color: #03C0C1;
 }
 
-
 /* media queries for navigation bar */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  
   .header {
     flex-direction: column;
     align-items: center;
@@ -172,11 +172,24 @@ body {
   }
 
   .event-categories {
-    font-size: 1.2rem;
-    justify-content: space-around;
+    font-size: 1rem;
   }
 
   .event-search-item {
-    margin-right: 0.5rem;
+    margin-left: 0;
   }
+}
+
+@media (max-width: 400px) {
+  
+  .search-bar {
+    width: 320px;
+  }
+
+  .event-list-container {
+    margin: 1rem;
+  }
+  
+
+
 }
