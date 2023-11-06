@@ -32,12 +32,11 @@ body {
   display: flex;
   align-items: center;
   margin: 0 1rem;
-  border: 0.4px solid #E6E6E6;
   width: 360px;
 }
 
 .search-input {
-  width: 280px;
+  width: fit-content;
   padding: 0.5rem;
   border: none;
   font-size: 1.2em;
@@ -46,7 +45,7 @@ body {
 }
 
 .search-btn {
-  width: 80px;
+  width: fit-content;
   padding: 0.5rem;
   border: none;
   font-size: 1.2em;
