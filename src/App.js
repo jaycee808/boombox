@@ -49,34 +49,25 @@ const App = () => {
                     </button>
                 </form>
             </div>
-            <div class="event-search-menu">
+
+            <div className="event-search-menu">
                 <ul className="event-categories">
-                    <li
-                        className="event-search-item"
-                        onClick={() => handleCategoryClick('music')}
-                    >
+                    <li className="event-search-item" onClick={() => handleCategoryClick('music')}>
                     Music
                     </li>
-                    <li
-                        className="event-search-item"
-                        onClick={() => handleCategoryClick('sport')}
-                    >
+                    <li className="event-search-item" onClick={() => handleCategoryClick('sport')}>
                     Sport
                     </li>
-                    <li
-                        className="event-search-item"
-                        onClick={() => handleCategoryClick('theatre')}
-                    >
+                    <li className="event-search-item" onClick={() => handleCategoryClick('theatre')}>
                     Theatre
                     </li>
-                    <li
-                        className="event-search-item"
-                        onClick={() => handleCategoryClick('comedy')}
-                    >
+                    <li className="event-search-item" onClick={() => handleCategoryClick('comedy')}>
                     Comedy
                     </li>
-                </ul>
+            </ul>
             </div>
+
+
             <div>
                 <EventList events={events} />
             </div>
