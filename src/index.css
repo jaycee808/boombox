@@ -32,7 +32,6 @@ body {
   display: flex;
   align-items: center;
   margin: 0 1rem;
-  width: 360px;
 }
 
 .search-input {
@@ -167,10 +166,6 @@ body {
     align-items: center;
   }
 
-  .search-bar {
-    margin-top: 1rem;
-  }
-
   .event-categories {
     font-size: 1rem;
   }
@@ -182,9 +177,6 @@ body {
 
 @media (max-width: 400px) {
   
-  .search-bar {
-    width: 320px;
-  }
 
   .event-list-container {
     margin: 1rem;
