@@ -15,7 +15,7 @@ const EventList = ({ events }) => {
             <div className="event-list">
                 {filteredEvents.map((event) => (
                     <div key={event.id} className="event-item">
-                    <img className="event-image" src={event.images[0].url} alt={event.name} />
+                        <img className="event-image" src={event.images[0].url} alt={event.name} />
                         <div className="event-item-content">
                             <h3 className="event-name">{event.name}</h3>
                             <div className="event-details">
@@ -24,6 +24,11 @@ const EventList = ({ events }) => {
                                     {new Date(event.dates.start.localDate).toLocaleString('default', { month: 'long' })}{' '}
                                     {new Date(event.dates.start.localDate).getFullYear()}
                                 </p>
+                                {event.dates.start.localTime && (
+                                    <p className="event-time">
+                                        Time: {new Date(`${event.dates.start.localDate}T${event.dates.start.localTime}`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                    </p>
+                                )}
                                 {event._embedded?.venues?.length > 0 ? (
                                     <div className="event-venue">
                                         <p>Venue: {event._embedded.venues[0].name}</p>
