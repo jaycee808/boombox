@@ -35,38 +35,48 @@ const App = () => {
     return (
         <div>
             <div className="header">
-                    <h1 className="logo">boombox</h1>
-                    <form className="search-bar" onSubmit={handleSearch}>
-                    <input
-                        className="search-input"
-                        type="text"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="Search for an event"
-                    />
-                    <button className="search-btn" type="submit">
-                        Search
-                    </button>
-                </form>
-            </div>
+                <div className="logo-container">
+                    <div className="logo-top">BOOM</div>
+                    <div className="logo-bottom">BOX.</div>
+                </div>
 
-            <div className="event-search-menu">
-                <ul className="event-categories">
-                    <li className="event-search-item" onClick={() => handleCategoryClick('music')}>
-                    Music
-                    </li>
-                    <li className="event-search-item" onClick={() => handleCategoryClick('sport')}>
-                    Sport
-                    </li>
-                    <li className="event-search-item" onClick={() => handleCategoryClick('theatre')}>
-                    Theatre
-                    </li>
-                    <li className="event-search-item" onClick={() => handleCategoryClick('comedy')}>
-                    Comedy
-                    </li>
-            </ul>
-            </div>
+                <div>
+                    <ul className="event-categories-list">
+                        <div className="top-row">
+                            <li className="event-search-item" onClick={() => handleCategoryClick('music')}>
+                            Music
+                            </li>
+                            <li className="event-search-item" onClick={() => handleCategoryClick('sport')}>
+                            Sport
+                            </li>
+                        </div>
+                        <div className="bottom-row">
+                            <li className="event-search-item" onClick={() => handleCategoryClick('theatre')}>
+                            Theatre
+                            </li>
+                            <li className="event-search-item" onClick={() => handleCategoryClick('comedy')}>
+                            Comedy
+                            </li>
+                        </div>
+                    </ul>
+                </div>
 
+                <div className="search-bar">
+                    <form onSubmit={handleSearch}>
+                        <input
+                            className="search-input"
+                            type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="Search for an event"
+                        />
+                        <button className="search-btn" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+
+            </div>
 
             <div>
                 <EventList events={events} />
