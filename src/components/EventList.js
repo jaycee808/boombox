@@ -31,7 +31,8 @@ const EventList = ({ events }) => {
                                 )}
                                 {event._embedded?.venues?.length > 0 ? (
                                     <div className="event-venue">
-                                        <p>Venue: {event._embedded.venues[0].name}</p>
+                                        <div className="venue-heading">Venue</div>
+                                        <p>{event._embedded.venues[0].name}</p>
                                         <EventMap event={event} />
                                     </div>
                                 ) : (
