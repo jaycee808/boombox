@@ -4,8 +4,9 @@ import EventMap from './EventMap';
 const EventList = ({ events }) => {
     const filteredEvents = events.filter((event, index, self) => {
         const foundIndex = self.findIndex(
-            (e) => e.dates.start.localDate === event.dates.start.localDate && 
-            e._embedded?.venues?.[0]?.name === event._embedded?.venues?.[0]?.name
+            (e) =>
+                e.dates.start.localDate === event.dates.start.localDate &&
+                e._embedded?.venues?.[0]?.name === event._embedded?.venues?.[0]?.name
         );
         return foundIndex === index;
     });
@@ -21,19 +22,25 @@ const EventList = ({ events }) => {
                             <div className="event-details">
                                 <p className="event-date">
                                     {new Date(event.dates.start.localDate).getDate()}{' '}
-                                    {new Date(event.dates.start.localDate).toLocaleString('default', { month: 'long' })}{' '}
+                                    {new Date(event.dates.start.localDate).toLocaleString('default', {
+                                        month: 'long',
+                                    })}{' '}
                                     {new Date(event.dates.start.localDate).getFullYear()}
                                 </p>
                                 {event.dates.start.localTime && (
                                     <p className="event-time">
-                                        Time: {new Date(`${event.dates.start.localDate}T${event.dates.start.localTime}`).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                        Time: {new Date(`${event.dates.start.localDate}T${event.dates.start.localTime}`).toLocaleTimeString([], {
+                                            hour: '2-digit',
+                                            minute: '2-digit',
+                                        })}
                                     </p>
                                 )}
                                 {event._embedded?.venues?.length > 0 ? (
                                     <div className="event-venue">
-                                        <div className="venue-heading">Venue</div>
-                                        <p>{event._embedded.venues[0].name}</p>
-                                        <EventMap event={event} />
+                                        <div>{event._embedded.venues[0].name}</div>
+                                        <div className="event-map-container">
+                                            <EventMap event={event} />
+                                        </div>
                                     </div>
                                 ) : (
                                     <p className="event-venue">Venue information not available</p>

@@ -5,12 +5,11 @@ import { getEvents } from './services/EventSearch';
 const App = () => {
     const [events, setEvents] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
+    const [activeTab, setActiveTab] = useState('music');
 
     useEffect(() => {
         // Events to display when the page loads
-        getEvents('classificationName=music')
-            .then((data) => setEvents(data))
-            .catch((error) => console.error(error));
+        handleCategoryClick('music');
     }, []);
 
     const handleSearch = async (e) => {
@@ -18,6 +17,7 @@ const App = () => {
         try {
             const data = await getEvents(`keyword=${searchQuery}`);
             setEvents(data);
+            setActiveTab('');
         } catch (error) {
             console.error(error);
         }
@@ -27,6 +27,7 @@ const App = () => {
         try {
             const data = await getEvents(`classificationName=${classificationName}`);
             setEvents(data);
+            setActiveTab(classificationName);
         } catch (error) {
             console.error(error);
         }
@@ -35,50 +36,48 @@ const App = () => {
     return (
         <div>
             <div className="header">
-                <div className="logo-container">
-                    <div className="logo-top">BOOM</div>
-                    <div className="logo-bottom">BOX.</div>
-                </div>
-
-                <div>
-                    <ul className="event-categories-list">
-                        <div className="top-row">
-                            <li className="event-search-item" onClick={() => handleCategoryClick('music')}>
-                            Music
-                            </li>
-                            <li className="event-search-item" onClick={() => handleCategoryClick('sport')}>
-                            Sport
-                            </li>
-                        </div>
-                        <div className="bottom-row">
-                            <li className="event-search-item" onClick={() => handleCategoryClick('theatre')}>
-                            Theatre
-                            </li>
-                            <li className="event-search-item" onClick={() => handleCategoryClick('comedy')}>
-                            Comedy
-                            </li>
-                        </div>
-                    </ul>
-                </div>
-
-                <div className="search-bar">
-                    <form onSubmit={handleSearch}>
-                        <input
-                            className="search-input"
-                            type="text"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search for an event"
-                        />
-                        <button className="search-btn" type="submit">
-                            Search
-                        </button>
-                    </form>
-                </div>
-
+                <h1 className="logo">boombox</h1>
+                <form className="search-bar" onSubmit={handleSearch}>
+                    <input
+                        className="search-input"
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="Search for an event"
+                    />
+                    <button className="search-btn" type="submit">
+                        Search
+                    </button>
+                </form>
             </div>
 
-            <div>
+            <div className="search-results-display">
+                <div className="event-categories">
+                    <div
+                        className={`event-search-item ${activeTab === 'music' ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick('music')}
+                    >
+                        Music
+                    </div>
+                    <div
+                        className={`event-search-item ${activeTab === 'sport' ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick('sport')}
+                    >
+                        Sport
+                    </div>
+                    <div
+                        className={`event-search-item ${activeTab === 'theatre' ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick('theatre')}
+                    >
+                        Theatre
+                    </div>
+                    <div
+                        className={`event-search-item ${activeTab === 'comedy' ? 'active' : ''}`}
+                        onClick={() => handleCategoryClick('comedy')}
+                    >
+                        Comedy
+                    </div>
+                </div>
                 <EventList events={events} />
             </div>
         </div>
