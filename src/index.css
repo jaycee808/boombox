@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap');
 
 :root {
     --white: #F2F2F2;
-    --black: #030303;
-    --pink: #FE019A;
-    --teal: #03C0C1;
-    --gray: #F2F2F2;
+    --black: #030206;
+    --blue: #0047AB;
+    --cyan: #00FFFF;
+    --navy: #0E1A33;
+    --gray-blue: #436D9A;
     --overlay-dark: rgba(0, 0, 0, 0.5);
     --shadow: rgba(0, 0, 0, 0.15);
 }
@@ -22,8 +23,7 @@ a {
 }
 
 body {
-    font-family: "Schibsted Grotesk", sans-serif;
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    background: var(--white);
     color: var(--white);
     width: 1200px;
     margin-left: auto;
@@ -41,20 +41,20 @@ body {
 }
 
 .logo {
-    font-size: 8rem;
-    font-weight: 900;
-    color: var(--pink);
+    font-family: "Syne", sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--blue);
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: -1px;
+    letter-spacing: -4px;
     position: relative;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: url("./images/background.png");
+    background-image: url("./images/blue-4.png");
     background-size: cover;
     background-position: right center;
-    -webkit-text-stroke: 4px var(--black);
 }
 
 .search-bar {
@@ -87,7 +87,7 @@ body {
     border-left: 2px solid var(--black);
     font-size: 1.2rem;
     font-weight: 600;
-    background-color: var(--pink);
+    background-color: var(--blue);
     color: var(--white);
     border-radius: 0 8px 8px 0;
     cursor: pointer;
@@ -95,17 +95,18 @@ body {
 }
 
 .search-btn:hover {
-    background-color: var(--teal);
+    background-color: var(--cyan);
     color: var(--black);
 }
 
 .search-results-display {
-    background-color: var(--pink);
+    background-color: var(--blue);
     border: 4px solid var(--black);
     padding: 2rem;
     border-radius: 12px;
     margin: 0 auto;
     box-shadow: 0 8px 16px var(--shadow);
+    font-family: 'Inter', sans-serif;
 }
 
 .event-categories {
@@ -127,7 +128,7 @@ body {
 }
 
 .event-search-item.active {
-    border-color: var(--teal);
+    border-color: var(--cyan);
     font-weight: bold;
 }
 
@@ -157,7 +158,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(to bottom, var(--gray) 0%, var(--white) 100%);
+    background: var(--white);
 }
 
 .event-name {
@@ -167,7 +168,7 @@ body {
     letter-spacing: -0.5px;
     margin-bottom: 1.5rem;
     color: transparent;
-    background-image: url("./images/background.png");
+    background-image: url("./images/blue-4.png");
     background-size: stretch;
     background-clip: text;
     -webkit-background-clip: text;
@@ -201,9 +202,10 @@ body {
     width: 100%;
     padding: 1rem;
     border: none;
+    font-family: 'Syne', 'Inter', sans-serif;
     font-size: 1.2rem;
-    font-weight: 600;
-    background-color: var(--pink);
+    font-weight: 800;
+    background-color: var(--blue);
     color: var(--white);
     cursor: pointer;
     text-transform: uppercase;
@@ -215,7 +217,7 @@ body {
 }
 
 .ticket-btn:hover {
-    background-color: var(--teal);
+    background-color: var(--cyan);
     color: var(--black);
 }
 
@@ -224,24 +226,23 @@ body {
 @media (max-width: 960px) {
     
     body {
-        width: 100%;
-        padding: 0 2rem;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .header {
         flex-direction: column;
         align-items: center;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
     }
 
     .logo {
-        font-size: 6rem;
-        margin-bottom: 1.5rem;
+        font-size: 4rem;
     }
 
     .search-bar {
         width: 100%;
-        margin-top: 1rem;
     }
 
     .search-input,
@@ -272,7 +273,6 @@ body {
     .event-image {
         width: 100%;
         height: auto;
-        border-radius: 12px 12px 0 0;
     }
 
     .event-item-content {
@@ -298,8 +298,12 @@ body {
         padding: 1rem;
     }
 
+    .header {
+        margin-bottom: 0;
+    }
+
     .logo {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .search-results-display {
@@ -341,8 +345,13 @@ body {
 
 @media (max-width: 480px) {
 
+    body {
+        padding: 1rem;
+        width: 100%;
+    }
+
     .logo {
-        font-size: 3.6rem;
+        font-size: 2.3rem;
     }
 
     .search-input,
@@ -356,7 +365,7 @@ body {
     }
 
     .event-name {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .event-details {
