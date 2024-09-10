@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
-    --white: #F2F2F2;
-    --black: #030206;
-    --blue: #0047AB;
+    --white: #F0F8FF;
+    --black: #020103;
+    --blue: #021265;
     --cyan: #00FFFF;
     --navy: #0E1A33;
     --gray-blue: #436D9A;
@@ -25,10 +25,15 @@ a {
 body {
     background: var(--white);
     color: var(--white);
-    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
+    font-family: 'Schibsted Grotesk','Inter', sans-serif;
+    background-image: url("./images/white-concrete.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .header {
@@ -36,19 +41,16 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 2rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .logo {
-    font-family: "Syne", sans-serif;
-    font-size: 5rem;
-    font-weight: 800;
-    color: var(--blue);
+    font-size: 8rem;
+    font-weight: 900;
+    color: var(--white);
     margin: 0;
     text-transform: uppercase;
     letter-spacing: -4px;
-    position: relative;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -106,7 +108,6 @@ body {
     border-radius: 12px;
     margin: 0 auto;
     box-shadow: 0 8px 16px var(--shadow);
-    font-family: 'Inter', sans-serif;
 }
 
 .event-categories {
@@ -132,9 +133,16 @@ body {
     font-weight: bold;
 }
 
+.event-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .event-item {
     display: flex;
-    position: relative;
+    flex-direction: column;
+    width: 400px;
     margin-bottom: 3rem;
     background-color: var(--white);
     border: 4px solid var(--black);
@@ -145,7 +153,7 @@ body {
 }
 
 .event-image {
-    width: 40%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     filter: brightness(0.9);
@@ -153,7 +161,6 @@ body {
 
 .event-item-content {
     padding: 2rem;
-    width: 60%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -202,7 +209,6 @@ body {
     width: 100%;
     padding: 1rem;
     border: none;
-    font-family: 'Syne', 'Inter', sans-serif;
     font-size: 1.2rem;
     font-weight: 800;
     background-color: var(--blue);
@@ -238,7 +244,7 @@ body {
     }
 
     .logo {
-        font-size: 4rem;
+        font-size: 6rem;
     }
 
     .search-bar {
@@ -303,7 +309,7 @@ body {
     }
 
     .logo {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .search-results-display {
@@ -351,7 +357,7 @@ body {
     }
 
     .logo {
-        font-size: 2.3rem;
+        font-size: 4rem;
     }
 
     .search-input,
