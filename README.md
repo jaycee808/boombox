@@ -14,7 +14,7 @@ Users have the option to explore different event categories or perform searches 
 ## Screenshot
 
 <p align="center">
-  <img src="/src/images/boombox-screenshot.jpg" width="1000" height="auto" title="Screenshot of application">
+  <img src="/src/images/boombox-screenshot.png" width="1000" height="auto" title="Screenshot of application">
 </p>
 
 ## Link to deployed site
