@@ -142,7 +142,7 @@ body {
 .event-item {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 48%;
     margin-bottom: 3rem;
     background-color: var(--white);
     border: 4px solid var(--black);
@@ -229,7 +229,7 @@ body {
 
 /* Media Queries (max-width: 960px) */
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
     
     body {
         width: 90%;
@@ -274,6 +274,7 @@ body {
 
     .event-item {
         flex-direction: column;
+        width: 100%;
     }
 
     .event-image {
